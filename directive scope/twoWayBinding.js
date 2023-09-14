@@ -23,6 +23,7 @@ angular
       template:
         "<div>" +
         '名稱：<input type="text" ng-model="myName"/>' +
+        "<br>" +
         '抬頭：<input type="text" ng-model="myTitle" />' +
         "</div>",
     };

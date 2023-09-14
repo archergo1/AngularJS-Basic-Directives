@@ -10,8 +10,11 @@ angular
   ])
   .directive("myDirective", function () {
     return {
-      scope: true,
-      //   if scope is set true, the directive will inherit the scope of the parent element
+      scope: false,
+      //   if scope is set false, You are manipulating the the same scope of controller it belongs to.
+      // and all directives share the same values
+      
+      
       template: '<input type="text" ng-model="myName"/>',
     };
   });
