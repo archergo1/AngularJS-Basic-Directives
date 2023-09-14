@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+  <body ng-controller="lotteryCtrl">
+    Select item:
+    <select
+      ng-model="Select1"
+      required
+      ng-options="lottery.ProductName for lottery in lotteryModel"
+    ></select>
+
+    <div ng-switch on ="Select1.ProductName" class="animate-switch-container">
+      <option ng-switch-when="POWER">POWER</option>
+      <option ng-switch-when="TODAY539">TODAY539</option>
+      <option ng-switch-default>BIG LOTTERY</option>
+    </div>
+  </body>
+</html>
+
+<!-- THIS DOES NOT WORK. REMEMBER TO COME BACK -->
+<!-- EVEN THE DEMO COULD WORK!! -->

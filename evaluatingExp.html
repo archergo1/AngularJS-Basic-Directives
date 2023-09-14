@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parent Scope Function</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="./evaluatingExp.js"></script>
+  </head>
+  <body ng-app="myExample" ng-controller="myCtrl">
+    <div>Parent Scope Function</div>
+
+  
+    <div my-directive update-name="updateName()" update-price="updatePrice()" add-obj="addObjKey(key)"></div>
+
+    <hr>
+
+    <div>myName: {{myName}}</div>
+    <div>obj:{{myObj}}</div>
+    <div>obj.price{{myObj.price}}</div>
+
+  </body>
+</html>
+

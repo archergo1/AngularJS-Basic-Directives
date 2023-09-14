@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>directive scope 範例</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="./oneWayBinding.js"></script>
+  </head>
+  <body ng-app="myExample" ng-controller="myCtrl">
+   
+    <div>controller value</div>
+    <div>
+        NAME:{{myName}} 
+        <br>
+        THE TITLE IN THE OBJECT : {{myObj.title}}
+    </div>
+    <hr>
+     <!-- share same value from myCtrl -->
+    <!-- <div my-directive="myObj"></div>
+    <div my-directive="myObj"></div> -->
+    
+    <!-- use {{}} to execute the scope variables -->
+    <div my-directive my-name="hello{{myName}}" title="myObj.title"></div>
+    <!-- without {{}}, you will pass string value  -->
+    <div my-directive my-name="hello string name"></div>
+
+  </body>
+</html>

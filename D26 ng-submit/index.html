@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ng-submit</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="./app.js"></script>
+</head>
+<body ng-controller="submitCtrl">
+    <form ng-submit="save()" name="myForm" action="">
+        Please enter your name: 
+        <input ng-model="designer.name" name="designerName" placeholder="name" required type="text">
+
+        <span ng-show="!myForm.designerName.$valid">Error, required</span>
+        <pre>myForm.designerName.$valid = {{myForm.designerName.$valid}}</pre>
+        <br>
+        Please enter your email: <input ng-model="designer.email" type="email" name="designerEmail" placeholder="xxx@XXX.XXX">
+
+        <span ng-show="!myForm.designerEmail.$valid">Error</span>
+        <span ng-show="myForm.designerEmail.$error.required">Must Fill</span>
+        <span ng-show="myForm.designer.$error.email">Email format error</span>
+        <br>
+        Please enter your age : 
+        <input placeholder="Age" ng-model="designer.age" name="designerAge">
+        <br>
+        <input type="submit" value="SAVE" ng-disabled="myForm.$invalid">
+    </form>
+</body>
+</html>

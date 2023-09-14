@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+  <body ng-app>
+    <form ng-controller="Ctrl" action="">
+      Value1: <input ng-model="value1" type="checkbox">
+      Value2: <input ng-model="value2" ng-true-value="YES" ng-false-value="NO" type="checkbox">
+      <br/>
+
+      <tt>value1 = {{value1}} </tt> <br>
+      <tt>value2 = {{value2}} </tt><br>
+
+    </form>
+  </body>
+</html>

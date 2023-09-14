@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="./controller.js"></script>
+</head>
+<body ng-controller="srcCtrl">
+    <ul >
+      <li ng-repeat="item in items">
+        <img ng-src="{{item.img}}" alt="">
+      </li>
+    </ul>
+</body>
+</html>
+
+
+<!-- 由於AngularJS是整個網站載完後才開始編譯，
+使用ng-src可以解決還沒載入完html發生的錯誤。 -->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ng-model</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="./app.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <!-- the ng-model directive binds the value of html controls(input, select, text area) to application data -->
+
+
+    NAME : <input type="text" ng-model="name">
+    <h1>YOU ENTERED: {{name}}</h1>
+
+
+    <!-- ng-model can also provide type validation for application data (number, email, required) -->
+    EMAIL: <input type="email" ng-model="email">
+    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+
+
+    <!-- ng-model directive provides CSS classes for html elements, depending on their status -->
+    Phone: <input type="number" ng-model="myPhone" required>
+
+    <!-- ng-model adds or removes the following classes, according to the status of thr form field -->
+
+
+    <!-- ng-empty
+    ng-not-empty
+    ng-touched
+    ng-untouched
+    ng-valid
+    ng-invalid
+    ng-dirty
+    ng-pending
+    ng-pristine -->
+
+</body>
+</html>

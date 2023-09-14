@@ -1,0 +1,30 @@
+.strike{
+    text-decoration: line-through;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.red{
+    color:red;
+}
+
+
+
+
+.active{
+    color:red;
+}
+
+.inactive{
+    color:blue;
+}
+
+.style1{
+    text-decoration: line-through;
+}
+
+.style2{
+    color: blue;
+}

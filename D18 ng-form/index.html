@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="./app.js"></script>
+    <meta charset="utf-8" />
+    <title>ng-form</title>
+  </head>
+  <body ng-controller="formCtrl">
+    <form ng-submit="submit()" action="">
+      <ng-form ng-repeat="key in keys" name="keyForm">
+        Name:
+        <input
+          type="text"
+          name="input_name"
+          ng-model="key.name"
+          required
+        /><br />
+        Age: <input type="text" name="input_age" ng-moddel="key.age" required />
+        <br />
+      </ng-form>
+      <br />
+      <input type="submit" value="Add" ng-click="addKey()" />
+      <input type="submit" value="Save" />
+    </form>
+    {{keys}}
+  </body>
+</html>

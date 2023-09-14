@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>isolate directive two way binding</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="./twoWayBinding.js"></script>
+  </head>
+  <body ng-app="myExample" ng-controller="myCtrl">
+    <div>controller value</div>
+
+    <!-- 取得 scope 變數不需要用 {{}} 包住 -->
+    <div my-directive my-name="myName" title="myObj.title"></div>
+
+    <!-- 修改上面 input value 會改變 parent scope。(two-way binding)-->
+    <div>parent:</div>
+    <div>myName: {{myName}}</div>
+    <div>obj.title: {{myObj.title}}</div>
+  </body>
+</html>

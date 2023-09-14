@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="./controller.js"></script>
+</head>
+<body>
+    <div ng-controller="myCtrl">
+        <!-- Currency -->
+        <h2>Currency</h2>
+        <input type="number" ng-model="money"> <br>
+        Default currency format : {{money | currency}} <br>
+        Custom currency format : {{money | currency:'USD$'}} <br>
+        Custom currency format : {{money | currency:'NTD'}} <br>
+         <!--  -->
+
+        <!-- Date -->
+        <h2>Date</h2>
+        <input type="date" ng-model="birth">
+        <pre>{{ birth | date }}</pre>
+        <pre>{{ birth | date:'yyyy, MM, dd'}}</pre>
+
+
+        <!-- NUMBER -->
+        <h2>Number</h2>
+        <input type="number" ng-model="num">
+        <pre>{{num | number}}</pre>
+        <pre>{{num | number:5}}</pre>
+
+
+        <!-- LOWERCASE -->
+        <h2>Lowercase</h2>
+        <input type="text" ng-model="lower">
+        <pre>{{lower| lowercase}}</pre>
+
+
+        <!-- UPPERCASE -->
+        <h2>Uppercase</h2>
+        <input type="text" ng-model="upper">
+        <pre>{{upper| uppercase}}</pre>
+
+
+        <!-- LIMITTO -->
+        <h2>LimitTO</h2>
+        <pre>
+            Limit {{numbers}} to <input type="integer" ng-model="numLimit">
+            <p>Output numbers: {{numbers | limitTo : numLimit}}</p>
+
+
+            Limit {{letters}} to : <input type="integer" ng-model="letterLimit">
+            <p>Output letters:{{letters | limitTo: letterLimit}}</p>
+
+        </pre>
+
+        <!-- JSON -->
+        <h2>Json</h2>
+        <pre>{{obj | json}}</pre>
+
+
+    </div>
+</body>
+</html>

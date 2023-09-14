@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+<!-- don't forget to add "ng-app" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+</head>
+<body>
+    <!-- <p>My name is {{yourName || 'Anna'}}!</p>
+    <label>請輸入你的名字，也和大家自我介紹吧! </label>
+    <input type="text" ng-model="yourName"> -->
+    <!-- <p ng-controller="TodoCtrl">MY NAME IS {{name}}</p> -->
+
+
+    <div ng-controller="Test">
+        NOW {{price | number}} 
+        <br/>
+        PLEASE ENTER: <input type="text" name="" id="" ng-model="price">
+        <br/>
+        <input type="button" value="NTD 100" ng-click="action()">
+    </div>
+</body>
+</html>

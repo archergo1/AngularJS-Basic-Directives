@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$watch</title>
+    <script src="./controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+</head>
+<body ng-controller="AddressControl">
+    $watch vs ng-change vs ng-click
+    <br>
+    $watch <input type="text" ng-model="test1">
+    <br>
+    ng-change <input type="text" ng-model="test2" ng-change="update()">
+    <br>
+    ng-click <input type="text" ng-model="test3" ng-click="update()">
+
+    <span>{{test1}}</span>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+  <body ng-controller="Ctrl">
+    <p ng-class="{strike:strike, bold:bold, red:red}">QUE TAL?</p>
+    <input type="checkbox" ng-model="bold" />bold
+    <input type="checkbox" ng-model="strike" />strike
+    <input type="checkbox" ng-model="red" />red
+    <hr />
+
+    <p ng-class="{true:'active', false:'inactive'}[isActive]">Hola Amigo</p>
+
+
+    <p ng-class="{'style1':isActive1, 'style2':isActive2}">WWW</p>
+
+
+  </body>
+</html>

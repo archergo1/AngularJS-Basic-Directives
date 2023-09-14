@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="./controller.js"></script>
+  </head>
+  <body ng-controller="Controller">
+    <input type="checkbox" ng-model="confirmed" ng-change="change()"/>
+    <label for="">USE CHECKBOX, CHANGE THE NUMBER OF COUNTER</label>
+    <br>
+
+    DEBUG : {{confirmed}} <br>
+    COUNTER : {{counter}}
+    <hr>
+
+  
+  </body>
+</html>
+
+
+<!-- THIS DOES NOT WORK. REMEMBER TO COME BACK -->

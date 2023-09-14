@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app>
+      <br />
+      <select ng-model="selection" name="" id="">
+        <option value="content1">CONTENT1</option>
+        <option value="content2">CONTENT2</option>
+      </select>
+
+      <div class="container">
+        <article ng-show="selection=='content1'">
+          <h2>Tailored Suit</h2>
+          <p>John is at the tailor's ordering a suit.</p>
+        </article>
+        <article ng-show="selection=='content2'">
+          <h2>Altering Suit</h2>
+          <p>Tom is at the tailor's for a fitting</p>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
