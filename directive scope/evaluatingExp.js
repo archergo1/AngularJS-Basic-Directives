@@ -27,10 +27,12 @@ angular
     return {
       scope: {
         // if nothing follows "&"", it means that the attribute and the parent function have the same name
+        // the code below is to bind the attribute directives to the parent function attributes
+        // the format is "function name : & attribute name"
         updateName: "&",
         updatePrice: "&",
         addObjectKey: "&addObj",
-        // the format is "function name : & attribute name"
+     
       },
 
       // 注意： addObjectKey pass 的參數名稱必須要跟 HTML 定義的一模一樣

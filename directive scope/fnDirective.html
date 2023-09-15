@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PASS A FUNCTION INTO A DIRECTIVE</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+
+    <script src="./fnDirective.js"></script>
+  </head>
+  <body ng-app="myExample" ng-controller="myCtrl">
+    CHANGE THE COLOR
+    <div color-picker="updateStyle(name, red, green, blue)"></div>
+    THE COLOR YOU CHOOSE
+    <div class="litter" ng-style="myStyle"></div>
+  </body>
+</html>

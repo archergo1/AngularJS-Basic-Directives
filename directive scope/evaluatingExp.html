@@ -10,15 +10,17 @@
   <body ng-app="myExample" ng-controller="myCtrl">
     <div>Parent Scope Function</div>
 
-  
-    <div my-directive update-name="updateName()" update-price="updatePrice()" add-obj="addObjKey(key)"></div>
+    <div
+      my-directive
+      update-name="updateName()"
+      update-price="updatePrice()"
+      add-obj="addObjectKey(key)"
+    ></div>
 
-    <hr>
+    <hr />
 
     <div>myName: {{myName}}</div>
     <div>obj:{{myObj}}</div>
     <div>obj.price{{myObj.price}}</div>
-
   </body>
 </html>
-
